@@ -1,0 +1,935 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+#scrollpath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+}
+
+#preogressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+#preogressbar:before,
+#preogressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#preogressbar:after{
+    filter: blur(30px);
+}
+
+@keyframes animate{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+#percent{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) rotateX(180deg) rotateY(180deg);
+    right: 15px;
+    color: #fff;
+    font-size: 1em;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.inicio{
+    position: relative;
+    width: 100%;
+    justify-content:space-between;
+    height: 100vh;
+    background: url(../image/cybersecurity-awareness.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 1px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.header.sticky{
+    background: rgba( 255, 255, 255, 0.04 );
+    backdrop-filter: blur( 2px );
+    border: 0px solid rgba( 255, 255, 255, 0.10 );
+    box-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef;
+    padding: 1px 10%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.8s;
+}
+
+.logo{
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo img{
+    width: 5pc;
+    margin-top:10px;
+    position: relative;
+    display: flex;
+}
+
+.navbar a{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .2s;
+    text-align: center;
+    left: -22pc;
+}
+
+.navbar a:hover{
+    color: #0ef; 
+    text-shadow: 0 0 5px #0ef,
+                 0 0 10px #0ef,
+                 0 0 20px #0ef;
+}
+
+.navbar a span{
+    color: #0ef; 
+    text-shadow: 0 0 5px #0ef,
+                 0 0 10px #0ef,
+                 0 0 20px #0ef;
+}
+
+.inicio-sci a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.inicio-sci a:hover{
+    background: #0ef;
+    color: #fff;
+    box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef;
+}
+
+.btn-box{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 48vh;
+    width: 220px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 25px 25px;
+    color: white;
+}
+
+.btn-box:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px #0ef;
+}
+
+.inicio-one{
+    min-height: 600px;
+    max-width: 600px;
+    margin-bottom: 60px;
+    padding-top: 9pc;
+}
+
+.inicio-one h3{
+    color: #c6e6f5;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.inicio-one h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.inicio-one span{
+    color: #0ef;
+}
+
+.inicio-one p{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;;
+}
+
+.sobre{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: #00000C;
+    background-size:contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.sobre-one{
+    position: relative;
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #c6e6f5;
+    margin-left: -4pc;
+}
+
+.sobre-one-one{
+    min-height: 70vh;
+    padding-right: 5pc;
+    border-right: 3px solid #c6e6f5;
+}
+
+.sobre-two{
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-three{
+    min-height: 30pc;
+    max-width: 51pc;
+    padding-bottom: 20px;
+    padding-top: 3pc; 
+    padding-left: 20pc;
+}
+
+.sobre-three h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.sobre-three span{
+    color: #0ef;
+
+}
+
+.past{
+    width: 36%;
+    position: absolute;
+    padding-top: 1pc;
+}
+
+.past p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.past p span{
+    color: #c6e6f5;
+}
+
+.sobre-four{
+    z-index: 1;
+    margin-top: 10pc;
+    margin-left: -14pc;
+}
+
+.sobre-four p{
+    max-width: 37pc;
+    color: aliceblue;
+    padding-top: 1pc;
+    font-size: 16px;
+}
+
+.sobre-five{
+    position: relative;
+    margin-left: -10pc;
+}
+
+.sobre-five img{
+    position: relative;
+    width: 32pc;
+    display: flex;
+    margin-left: 3pc;
+    margin-top: 3pc;
+}
+
+.ataques{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: #00000C;
+    display: flex;
+    padding: 70px 1% 0;
+}
+
+.ataques-one{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #c6e6f5;
+    padding-top: 4pc;
+    padding-left: 20pc;
+    
+}
+
+.ataques-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8pc;
+    padding-left: 3pc;
+}
+
+.ataques-two .ataques-three{
+    position: relative;
+    min-width: 290px;
+    height: 410px;
+    box-shadow: inset 5px 5px 5px #0ef,
+                inset -5px -5px 15px rgba(255,255,255,0.1),
+                5px 5px 15px #2196f3,
+                -5px -5px 15px rgba(255,255,255,0.1);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.ataques-two .ataques-three::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.ataques-two .ataques-three .ataques-four{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgba( 255, 255, 255, 0.1);
+    border: 2px solid #1e1f23;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ataques-two .ataques-three .ataques-four::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+
+.ataques-three .ataques-four img{
+    position: absolute;
+    top: 7pc;
+    right: 38px;
+    font-size: 8em;
+    width: 70%;
+}
+
+.ataques-two .ataques-three .ataques-four h3{
+    position: relative;
+    font-size: 1.8em;
+    color: #2196f3;
+    transition: 0.5s;
+    top: -8pc;
+    left: 0pc;
+    
+}
+
+.ataques-three .ataques-four .ataques-five{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), #0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.ataques-two .ataques-three .ataques-four .ataques-five p{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 1;
+    transition: 0.5s;
+    top:8pc;
+    color: var(--second-color);
+    line-height: 1.1;
+    
+}
+
+.ataques-two .ataques-three .ataques-four .ataques-five a{
+    position: relative;
+    display: inline-block;
+    top: 6pc;
+    padding: 8px 20px;
+    background: #000;
+    margin-top: 9pc;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ataques-three:nth-child(1) .ataques-four .ataques-five a{
+    background: #2196f3;
+}
+
+.ataques-three:nth-child(2) .ataques-four .ataques-five a{
+    background: #e91e63;
+}
+
+.ataques-three:nth-child(3) .ataques-four .ataques-five a{
+    background: #97dc47;
+}
+
+.ataques-three:nth-child(4) .ataques-four .ataques-five a{
+    background: rgb(248, 245, 78);
+}
+
+.ataques-three:nth-child(5) .ataques-four .ataques-five a{
+    background: #97dc47;
+}
+
+.ataques-three .ataques-four:hover .ataques-five{
+    position: absolute;
+    height: 60vh;
+    min-width: 100%;
+    color: #1e1f23;
+}
+
+.prevencao{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #00000C;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7pc;
+}
+
+.prevencao-one{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    color:aliceblue;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.br-prevencao{
+    position: absolute;
+    max-width: 700px;
+    height: 450px;
+    box-shadow: -3px -3px 2px #2196f3,
+                 5px 5px 5px rgba(0,0,0),
+                 15px 15px 15px rgb(0, 0, 0);
+    border-radius: 15px;
+    margin-top: 5pc;
+    margin-right: 38pc;
+}
+
+
+.prevencao-two{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color:aliceblue;
+    padding-top: 3pc;
+    padding-left: 3pc;
+    text-align: justify;
+    
+}
+
+.prevencao-two h2{
+    color: aliceblue;
+    
+}
+
+.prevencao .prevencao-three .column{
+    width: calc(100% - 60px);
+}
+
+.prevencao .prevencao-three .left .text{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.prevencao .prevencao-three .left{
+    padding-top: 1pc;
+}
+
+.prevencao .prevencao-three .left p{
+    text-align: justify;
+    color: #fff;
+    margin-top: 1pc;
+    margin-bottom:2pc;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4pc;
+}
+
+.prevencao .prevencao-three .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-left: 15pc;
+    z-index: 1;
+}
+
+.prevencao .prevencao-three .left a:hover{
+    color: crimson;
+    background: none;
+}
+
+.prevencao .prevencao-four{
+    margin-bottom: 10px;
+    padding-top: 7pc;
+    padding-left: 50pc;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.prevencao .prevencao-four .four{
+    position: absolute;
+    padding-top: 17px;
+    font-size: 15px;
+    font-weight: 500;
+    color: aliceblue;
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1px;
+    min-height: 5vh;
+}
+
+.prevencao .prevencao-four span{
+    font-weight: 400;
+    font-size: 18px;
+    color: aliceblue; 
+    text-align: justify;
+}
+
+.prevencao-four .prevencao-five{
+    margin-top: 1pc;
+    margin-bottom: -80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.prevencao-four .prevencao-five .five{
+    margin-top: 7pc;
+    height: 1px;
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prevencao .prevencao-four .six{
+    height: 5px;
+    width: 500px;
+    background: lightgray;
+    position: relative;
+    margin-top: 1pc;
+}
+
+.prevencao .prevencao-four .six::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.prevencao-four .brasil::before{
+    width: 41.78%;
+}
+
+.prevencao-four .estados::before{
+    width: 50%;
+}
+
+.prevencao-four .espanha::before{
+    width: 44%;
+}
+
+.prevencao-four .mexico::before{
+    width: 40%;
+}
+
+.prevencao-four .australia::before{
+    width: 43.52%;
+}
+
+.prevencao-four .norte::before{
+    width: 17%;
+}
+
+.servicos{
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    background: #00000C;
+    justify-content:center;
+    display: flex;
+    text-align: center;
+    margin-top:43pc;
+}
+
+.servico-br{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:aliceblue;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 7pc;
+}
+
+.servico-br h2{
+    border-bottom: 2px solid aliceblue;
+}
+
+.servico-one{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8pc;
+    gap: 150px;
+    padding: 200px 10%;
+}
+
+.servico-one .servico-three{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    box-shadow: -3px -3px 2px #000,
+                 5px 5px 5px #000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servico-one .servico-three::before{
+    content: '';
+    position: absolute;
+    inset: -10px 50px;
+    border-top: 4px solid var(--clr);
+    border-bottom: 4px solid var(--clr);
+    z-index: 1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.servico-one .servico-three:hover::before{
+    transform: skewY(0deg);
+    inset: -10px 40px;
+}
+
+.servico-one .servico-three::after{
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid var(--clr);
+    border-right: 4px solid var(--clr);
+    z-index: 1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.servico-one .servico-three:hover::after{
+    transform: skewY(0deg);
+    inset: 40px -10px;
+}
+
+.servico-one .servico-three .servico-two{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    border-radius: 15px;
+    gap: 30px;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.servico-one .servico-three .servico-two .icon{
+    color: var(--clr);
+    width: 80px;
+    height: 100%;
+    box-shadow: 0 0 0 4px #00000C, 
+                0 0 0 6px var(--clr);
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    background: #00000C;
+    transition: 0.5s ease-in-out;
+}
+
+.servico-one .servico-three:hover .servico-two .icon{
+    background: var(--clr);
+    color: #00000C;
+    box-shadow: 0 0 0 4px #00000c, 
+                0 0 0 300px var(--clr);
+}
+
+.servico-one .servico-three .servico-two .text{
+    font-size: 15px;
+    color: aliceblue;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+}
+
+.servico-one .servico-three:hover .servico-two .text h3{
+    color: #00000c;
+}
+
+.servico-one .servico-three .servico-two .text p{
+    color: aliceblue;
+    transition: 0.5s ease-in-out;
+}
+
+.servico-one .servico-three:hover .servico-two .text p{
+    color: #00000c;
+}
+
+.hacker{
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    background: url(../image/hackers.png), no-repeat;
+    background-position: center;
+    background-size: center;
+    margin-top:129pc;
+}
+
+.hackers{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 600;
+    width: 50%;
+    margin-top: 1pc;
+    margin-left: 2pc;
+}
+
+.hackers h2.text1{
+    color: #6e18f3;
+    padding: 40px;
+    filter: drop-shadow(-3px -3px 2px rgba(255,255,255,0.3))
+            drop-shadow(5px 5px 5px rgba(0,0,0,0.2))
+            drop-shadow(15px 15px 15px rgba(0,0,0,0.2));
+}
+
+.hacker-one{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 38pc;
+    margin-left: 20px;
+    font-size: 19px;
+    width: 25%;
+    transform: rotate(-8.9deg);
+}
+
+.hacker-two{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 48pc;
+    margin-left: 31pc;
+    font-size: 17px;
+    width: 39%;
+    transform: rotate(3.9deg);
+}
+
+.hacker-three{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 33pc;
+    margin-left: 70pc;
+    font-size: 18px;
+    width: 25%;
+    transform: rotate(-4.9deg);
+}
+
+.hacker-four{
+    width: 33%;
+    position: absolute;
+    padding-top: 1pc;
+    margin-left: 51pc;
+    margin-top: 17vh;
+    line-height: 3;
+}
+
+.hacker-four p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hacker-five{
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-top: 29pc;
+    margin-left: 36pc;
+    color: #c6e6f5;
+    transform: rotate(-6deg);
+}
+
+.hacker-five h3{
+    font-size: 20px;
+}
+
+.heading a:hover{
+    background: rgb(248, 245, 78);
+    color: #00000C;
+    box-shadow: 0 0 10px rgb(248, 245, 78), 0 0 20px rgb(248, 245, 78), 0 0 40px rgb(248, 245, 78);
+}
+
+.btn{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 48vh;
+    margin-left: 78pc;
+    width: 220px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(248, 245, 78);
+    border-radius: 25px 25px;
+    color: #00000C;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: rgb(248, 245, 78);
+    color: #00000C;
+    box-shadow: 0 0 10px rgb(248, 245, 78), 0 0 20px rgb(248, 245, 78), 0 0 40px rgb(248, 245, 78);
+}
+
+
